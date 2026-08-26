@@ -1,1 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Admiral General Aladeen | Fanpage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">ALADEEN</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#facts">Fun Facts</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="subtitle">THE DICTATOR</p>
+
+            <h1>
+                ADMIRAL GENERAL
+                <span>ALADEEN</span>
+            </h1>
+
+            <p class="hero-text">
+                Supreme Leader. President. General.
+                Champion of Wadiya.
+            </p>
+
+            <a href="#about" class="hero-button">
+                DISCOVER ALADEEN
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+
+        <div class="section-title">
+            <p>THE SUPREME LEADER</p>
+            <h2>WHO IS ALADEEN?</h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="images/aladeen-1.jpeg" alt="Admiral General Aladeen">
+            </div>
+
+            <div class="about-text">
+
+                <h3>Admiral General Aladeen</h3>
+
+                <p>
+                    Admiral General Aladeen is the fictional dictator
+                    of the Republic of Wadiya in the 2012 comedy film
+                    <em>The Dictator</em>, portrayed by Sacha Baron Cohen.
+                </p>
+
+                <p>
+                    Known for his extreme confidence, eccentric personality
+                    and authoritarian leadership style, Aladeen finds
+                    himself in unfamiliar territory when he travels to
+                    New York City.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>2012</strong>
+                        <span>Film</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>Wadiya</strong>
+                        <span>Home Country</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>Sacha</strong>
+                        <span>Portrayed By</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+
+        <div class="section-title">
+            <p>A VISUAL HISTORY</p>
+            <h2>THE GALLERY</h2>
+        </div>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="images/aladeen-1.jpeg"
+                     alt="Aladeen portrait"
+                     onclick="selectImage(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/aladeen-2.jpeg"
+                     alt="Aladeen in uniform"
+                     onclick="selectImage(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/aladeen-3.jpeg"
+                     alt="Aladeen smiling"
+                     onclick="selectImage(this)">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/aladeen-4.jpeg"
+                     alt="Aladeen character still"
+                     onclick="selectImage(this)">
+            </div>
+
+        </div>
+
+        <!-- Selected Image -->
+        <div class="selected-image-container">
+
+            <img id="selectedImage"
+                 src="images/aladeen-1.jpeg"
+                 alt="Selected Aladeen image">
+
+            <p>Click an image above to display it here.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Fun Facts -->
+    <section id="facts" class="section facts-section">
+
+        <div class="section-title">
+            <p>ONLY ALADEEN KNOWS</p>
+            <h2>FUN FACTS</h2>
+        </div>
+
+        <div class="fact-box">
+
+            <div class="fact-icon">
+                ★
+            </div>
+
+            <p id="fact">
+                Click the button to discover a fact about Aladeen.
+            </p>
+
+            <button id="factButton">
+                GENERATE FACT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Character Traits -->
+    <section class="section traits-section">
+
+        <div class="section-title">
+            <p>THE GREATNESS OF ALADEEN</p>
+            <h2>CHARACTER TRAITS</h2>
+        </div>
+
+        <div class="traits">
+
+            <div class="trait">
+                <span>01</span>
+                <h3>CONFIDENT</h3>
+                <p>
+                    Aladeen has an enormous sense of self-importance
+                    and rarely doubts his own greatness.
+                </p>
+            </div>
+
+            <div class="trait">
+                <span>02</span>
+                <h3>AUTHORITARIAN</h3>
+                <p>
+                    As Wadiya's ruler, Aladeen exercises absolute
+                    political power over his country.
+                </p>
+            </div>
+
+            <div class="trait">
+                <span>03</span>
+                <h3>ECCENTRIC</h3>
+                <p>
+                    His bizarre behaviour and extravagant lifestyle
+                    make him one of comedy's most memorable dictators.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+
+        <div class="quote-content">
+
+            <p class="quote-mark">"</p>
+
+            <blockquote>
+                I'm not a dictator.
+            </blockquote>
+
+            <p class="quote-author">
+                — Admiral General Aladeen
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            ALADEEN
+        </div>
+
+        <p>
+            A fanpage dedicated to Admiral General Aladeen
+            from <em>The Dictator</em>.
+        </p>
+
+        <p class="copyright">
+            Fan-made website • Not affiliated with the film
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
