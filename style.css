@@ -1,0 +1,618 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: rgba(10, 10, 10, 0.95);
+
+    border-bottom: 1px solid #333;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #d4af37;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("images/aladeen-2.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+
+    animation: heroAppear 1s ease;
+}
+
+.subtitle {
+    color: #d4af37;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #d4af37;
+}
+
+.hero-text {
+    font-size: 20px;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+
+    color: #ddd;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #d4af37;
+
+    color: #111;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+
+    background-color: #f0d36d;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 110px 8%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #d4af37;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: #181818;
+}
+
+.about-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+
+    height: 550px;
+
+    object-fit: cover;
+}
+
+.about-text h3 {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+    color: #d4af37;
+}
+
+.about-text p {
+    color: #ccc;
+
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+.stat {
+    border-left: 2px solid #d4af37;
+
+    padding-left: 15px;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 24px;
+}
+
+.stat span {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background-color: #111;
+}
+
+.gallery {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 250px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.selected-image-container {
+    max-width: 800px;
+
+    margin: 40px auto 0;
+
+    text-align: center;
+}
+
+.selected-image-container img {
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border: 2px solid #333;
+}
+
+.selected-image-container p {
+    margin-top: 15px;
+
+    color: #888;
+}
+
+
+/* =========================
+   FUN FACTS
+========================= */
+
+.facts-section {
+    background-color: #181818;
+}
+
+.fact-box {
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 60px 40px;
+
+    border: 1px solid #444;
+
+    background-color: #111;
+}
+
+.fact-icon {
+    font-size: 45px;
+
+    color: #d4af37;
+
+    margin-bottom: 20px;
+}
+
+#fact {
+    min-height: 60px;
+
+    font-size: 20px;
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+}
+
+#factButton {
+    border: none;
+
+    padding: 15px 30px;
+
+    background-color: #d4af37;
+
+    color: #111;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#factButton:hover {
+    transform: scale(1.05);
+
+    background-color: #f0d36d;
+}
+
+
+/* =========================
+   TRAITS
+========================= */
+
+.traits-section {
+    background-color: #111;
+}
+
+.traits {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.trait {
+    padding: 40px;
+
+    background-color: #181818;
+
+    border-top: 3px solid #d4af37;
+
+    transition: 0.3s;
+}
+
+.trait:hover {
+    transform: translateY(-8px);
+}
+
+.trait span {
+    color: #d4af37;
+
+    font-size: 14px;
+}
+
+.trait h3 {
+    font-size: 28px;
+
+    margin: 15px 0;
+}
+
+.trait p {
+    color: #aaa;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url("images/aladeen-3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.quote-mark {
+    color: #d4af37;
+
+    font-size: 80px;
+
+    height: 60px;
+}
+
+blockquote {
+    font-size: clamp(30px, 5vw, 60px);
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    color: #aaa;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background-color: #080808;
+
+    color: #888;
+}
+
+.footer-logo {
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    color: #d4af37;
+
+    margin-bottom: 15px;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .traits {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .hero {
+        padding-top: 150px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+}
