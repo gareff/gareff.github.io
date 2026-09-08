@@ -22,7 +22,9 @@ const facts = [
 
     "clarius lim is a handsome man",
 
-    "gareth is full of shit" ];
+    "gareth is full of shit",
+    
+    "test"];
 
 const factButton = document.getElementById("factButton");
 
