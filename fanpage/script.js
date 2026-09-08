@@ -18,9 +18,11 @@ const facts = [
 
     "The Dictator is a comedy film directed by Larry Charles.",
 
-    "Wadiya is a fictional country created for the film."
+    "Wadiya is a fictional country created for the film.",
 
-];
+    "clarius lim is a handsome man",
+
+    "gareth is full of shit" ];
 
 const factButton = document.getElementById("factButton");
 
